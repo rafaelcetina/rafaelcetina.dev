@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectsList from '../components/ProjectsList.vue';
+---
+
+<Layout title="Open Source | Rafael Cetina">
+	<main>
+		<ProjectsList path={Astro.url.pathname} />
+	</main>
+</Layout>

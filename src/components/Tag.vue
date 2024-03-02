@@ -1,0 +1,35 @@
+<script setup lang="ts">
+const props = defineProps({
+  name: {
+    type: String,
+    required: true,
+  },
+});
+
+const tagColor: Record<string, string> = {
+  nextjs: 'border-blue-300',
+  astrojs: 'border-orange-600',
+  nodejs: 'border-green-300',
+  javascript: 'border-yellow-300',
+  java: 'border-amber-800',
+  angular: 'border-red-600',
+  typescript: 'border-blue-500',
+  python: 'border-orange-500',
+  django: 'border-green-600',
+  reactjs: 'border-sky-400',
+  html: 'border-yellow-200',
+  css: 'border-purple-200',
+  bootstrap: 'border-red-300',
+  tailwindcss: 'border-green-300',
+  sfml: 'border-amber-500',
+  'open-source': 'border-slate-600',
+  'c++': 'border-red-500',
+  'data-structures': 'border-orange-300',
+};
+</script>
+
+<template>
+  <span :class="`border px-2 ${tagColor[props.name]} rounded text-zinc-800 dark:text-zinc-100`">
+    {{ props.name }}
+  </span>
+</template>

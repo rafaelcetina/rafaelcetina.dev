@@ -1,0 +1,23 @@
+---
+import SectionTitle from './SectionTitle.vue';
+import Skill from './Skill.astro';
+
+const skills = [
+	'Typescript',
+	'Java',
+	'ReactJs',
+	'NodeJs',
+	'C/C++',
+	'Mysql',
+	'PostgreSql',
+	'Git',
+	'Linux',
+];
+---
+
+<section class="mt-10">
+	<SectionTitle title="Skills" />
+	<ul class="mt-8 flex max-h-40 w-fit flex-col flex-wrap gap-5 pl-4 md:max-h-36">
+		{skills.map((skill) => <Skill v-for="skill in skills" name={skill} />)}
+	</ul>
+</section>

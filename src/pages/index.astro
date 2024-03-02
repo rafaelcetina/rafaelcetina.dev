@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OpenSourceList from '../components/OpenSourceList';
+import HeroSection from '../components/HeroSection.astro';
+import ProjectsList from '../components/ProjectsList.vue';
+import Skills from '../components/Skills.astro';
+import Posts from '../components/Posts.vue';
+import { getCollection } from 'astro:content';
+
+let posts = await getCollection('blog');
+posts = posts
+	.sort((p1, p2) => Date.parse(p2.data.pubDate.toString()) - Date.parse(p1.data.pubDate.toString()))
+	.slice(0, 4);
+---
+
+<Layout>
+	<main>
+		<HeroSection />
+		<ProjectsList limit={1} />
+		<!--OpenSourceList client:load /-->
+		<Posts title="Latest posts" posts={posts} />
+		<Skills />
+	</main>
+</Layout>
