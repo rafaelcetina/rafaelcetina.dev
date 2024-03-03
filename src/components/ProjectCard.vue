@@ -17,7 +17,8 @@ const props = defineProps<ProjectCardProps>();
 </script>
 
 <template>
-  <div class="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 drop-shadow-xl dark:border-zinc-700 dark:bg-zinc-800">
+  <div
+    class="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 drop-shadow-xl dark:border-zinc-700 dark:bg-zinc-800">
     <div class="flex flex-col md:flex-row md:items-center">
       <div class="md:w-3/5 md:pr-4">
         <h2 class="text-2xl text-zinc-800 dark:text-zinc-100">{{ projectName }}</h2>
