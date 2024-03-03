@@ -41,8 +41,7 @@ const { activeNav } = Astro.props;
 			}
 			<li class="h-fit">
 				<button
-					id="theme-btn"
-					class="py-1 hover:text-sky-300 dark:hover:text-orange-300"
+					class="theme-btn py-1 hover:text-sky-300 dark:hover:text-orange-300"
 					title="Toggles light & dark"
 					aria-label="auto"
 					aria-live="polite"
@@ -62,6 +61,18 @@ const { activeNav } = Astro.props;
 				<NavItem client:load title={item.title} link={item.link} path={activeNav} />
 			))
 		}
+		<li class="h-fit">
+			<button
+				class="theme-btn py-1 hover:text-sky-300 dark:hover:text-orange-300"
+				title="Toggles light & dark"
+				aria-label="auto"
+				aria-live="polite"
+			>
+				<SunIcon id="btn-sun" size="28" />
+				<MoonIcon id="btn-moon" size="28" />
+			</button>
+		</li>
+		
 	</ul>
 </header>
 
