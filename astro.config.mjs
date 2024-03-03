@@ -15,6 +15,7 @@ import vue from '@astrojs/vue';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.rafaelcetina.github.io',
+	basePath: 'https://www.rafaelcetina.github.io',
 	integrations: [
 		tailwind({
 			config: {
