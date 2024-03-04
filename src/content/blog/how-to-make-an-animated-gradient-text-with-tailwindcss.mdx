@@ -1,12 +1,12 @@
 ---
 title: 'How to make an animated gradient text with tailwindcss'
-author: 'André Alves'
-pubDate: '2023-03-13'
+author: 'Rafael Cetina'
+pubDate: '2023-03-03'
 description: 'Making an animated gradient text with tailwind and a little bit of css.'
-tags: ['tailwindcss','css','reactjs']
+tags: ['tailwindcss','css','vuejs']
 coverImage:
   src: '/images/react-tailwind-cover.jpg'
-  alt: 'The logo of ReactJs and Tailwind CSS'
+  alt: 'The logo of React and Tailwind CSS'
 ---
 
 import TextGradient from '../../components/TextGradient.vue'
@@ -100,27 +100,36 @@ Basically what this animation do is to zoom in the background and go leftwards a
 
 ## 3. Bonus: Create a react component for this element
 
-```tsx
-type TextGradientProps = {
-  text: string
-  from?: string
-  via?: string
-  to?: string
-}
+```html
+<script setup lang="ts">
+import { ref } from 'vue';
 
-export default function TextGradient(props: TextGradientProps) {
-  const from = props.from || 'from-orange-700'
-  const via = props.via || 'via-blue-500'
-  const to = props.to || 'to-green-400'
+const props = defineProps({
+  text: {
+    type: String,
+    required: true,
+  },
+  from: {
+    type: String,
+    default: 'from-orange-700',
+  },
+  via: {
+    type: String,
+    default: 'via-blue-500',
+  },
+  to: {
+    type: String,
+    default: 'to-green-400',
+  },
+});
+</script>
 
-  return (
-    <span
-      className={`bg-gradient-to-r ${from} ${via} ${to} text-transparent bg-clip-text bg-300% animate-gradient`}
-    >
-      {props.text}
-    </span>
-  )
-}
+<template>
+  <span
+    :class="`bg-gradient-to-r ${props.from} ${props.via} ${props.to} animate-gradient bg-300% bg-clip-text text-transparent`">
+    {{ props.text }}
+  </span>
+</template>
 ```
 
 Thanks for reading.
