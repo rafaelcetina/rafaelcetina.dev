@@ -3,11 +3,10 @@ import NavItem from './NavItem.vue';
 import MoonIcon from './icons/MoonIcon.vue';
 import SunIcon from './icons/SunIcon.vue';
 import BarsIcon from './icons/BarsIcon.vue';
-const base = import.meta.env.BASE_URL;
 const navItems = [
 	{
 		title: 'Home',
-		link: `${base}/`,
+		link: `/`,
 	},
 	/*{
 		title: 'Open Source',
@@ -15,12 +14,12 @@ const navItems = [
 	},
 	{
 		title: 'Projects',
-		link: `${base}/projects/`,
+		link: `/projects/`,
 	},
 	*/
 	{
 		title: 'Blog',
-		link: `${base}/blog/`,
+		link: `/blog/`,
 	},
 ];
 
@@ -29,7 +28,7 @@ const { activeNav } = Astro.props;
 
 <header class="border-b border-zinc-500 text-lg">
 	<div class="flex items-center justify-between pb-6 pt-3">
-		<a class="text-2xl font-semibold hover:text-zinc-600 dark:hover:text-zinc-200" href=`${base}/`>
+		<a class="text-2xl font-semibold hover:text-zinc-600 dark:hover:text-zinc-200" href=`/`>
 			[rafaelcetina.dev]
 		</a>
 		<ul class="hidden md:flex md:gap-2">
@@ -73,7 +72,6 @@ const { activeNav } = Astro.props;
 				<MoonIcon id="btn-moon" size="28" />
 			</button>
 		</li>
-		
 	</ul>
 </header>
 
