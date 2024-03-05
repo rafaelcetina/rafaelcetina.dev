@@ -31,17 +31,19 @@ const { activeNav } = Astro.props;
 		<a class="text-2xl font-semibold hover:text-zinc-600 dark:hover:text-zinc-200" href=`/`>
 			[rafaelcetina.dev]
 		</a>
-		<ul class="hidden md:flex md:gap-2">
-			{
-				navItems.map((item) => (
-					<li>
-						<NavItem client:load title={item.title} link={item.link} path={activeNav} />
-					</li>
-				))
-			}
-			<li class="h-fit">
+		<div class="flex gap-2">
+			<ul class="hidden md:flex md:gap-2">
+				{
+					navItems.map((item) => (
+						<li>
+							<NavItem client:load title={item.title} link={item.link} path={activeNav} />
+						</li>
+					))
+				}
+			</ul>
+			<div>
 				<button
-					class="theme-btn py-1 hover:text-sky-300 dark:hover:text-orange-300"
+					class="theme-btn justify-end py-1 hover:text-sky-300 dark:hover:text-orange-300"
 					title="Toggles light & dark"
 					aria-label="auto"
 					aria-live="polite"
@@ -49,11 +51,12 @@ const { activeNav } = Astro.props;
 					<SunIcon id="btn-sun" size="28" />
 					<MoonIcon id="btn-moon" size="28" />
 				</button>
-			</li>
-		</ul>
-		<button class="md:hidden" aria-label="menu-icon">
-			<BarsIcon size="30" />
-		</button>
+
+				<button class="md:hidden" aria-label="menu-icon">
+					<BarsIcon size="30" />
+				</button>
+			</div>
+		</div>
 	</div>
 	<ul class="flex hidden flex-col items-center gap-3 text-lg md:hidden" aria-label="menu">
 		{
@@ -61,17 +64,6 @@ const { activeNav } = Astro.props;
 				<NavItem client:load title={item.title} link={item.link} path={activeNav} />
 			))
 		}
-		<li class="h-fit">
-			<button
-				class="theme-btn py-1 hover:text-sky-300 dark:hover:text-orange-300"
-				title="Toggles light & dark"
-				aria-label="auto"
-				aria-live="polite"
-			>
-				<SunIcon id="btn-sun" size="28" />
-				<MoonIcon id="btn-moon" size="28" />
-			</button>
-		</li>
 	</ul>
 </header>
 
