@@ -5,6 +5,8 @@ import { twitter, siteAuthor } from '../data/socials';
 import '../styles/base.css';
 
 import '@fontsource-variable/inter';
+import SpeedInsights from '@vercel/speed-insights/astro';
+
 export interface Props {
 	title?: string;
 	author?: string;
@@ -88,5 +90,6 @@ const theme = 'dark';
 			<slot />
 			<Footer />
 		</div>
+		<SpeedInsights />
 	</body>
 </html>
