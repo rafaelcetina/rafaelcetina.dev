@@ -31,7 +31,7 @@ const dateFormatter = (date: string) => {
     <ul class="mt-4">
       <li v-for="post in props.posts" :key="post.data.title"
         class="rounded border-b border-zinc-500 p-4 hover:bg-zinc-200 dark:hover:bg-zinc-800">
-        <a class="flex" :href="'/rafaelcetina.dev/blog/' + post.slug + '/'">
+        <a class="flex" :href="'/blog/' + post.slug + '/'">
           <div class="flex w-full flex-col justify-between gap-2">
             <div>
               <h1 class="text-xl">{{ post.data.title }}</h1>

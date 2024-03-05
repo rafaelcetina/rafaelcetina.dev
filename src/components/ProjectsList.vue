@@ -34,7 +34,7 @@ const projects: ProjectCardProps[] = [
 			"Avoid the Mud is a shortest path visualizer that uses Dijkstra's algorithm to find the shortest path between two points in a grid while avoiding obstacles like muds and trees.",
 		sourceLink: 'https://github.com/projeto-de-algoritmos/Grafos2_AvoidTheMud',
 		liveLink: 'https://projeto-de-algoritmos.github.io/Grafos2_AvoidTheMud/',
-		projectImageSrc: '/rafaelcetina.dev/images/avoid-the-mud.png',
+		projectImageSrc: '/images/avoid-the-mud.png',
 	},
 	{
 		projectName: 'WikiBacon',
@@ -44,7 +44,7 @@ const projects: ProjectCardProps[] = [
 			"An app that uses Wikipedia's API to find the shortest path between two Wikipedia articles with some constraints.",
 		sourceLink: 'https://github.com/projeto-de-algoritmos/Grafos1-WikiBacon',
 		liveLink: 'https://projeto-de-algoritmos.github.io/Grafos1-WikiBacon/',
-		projectImageSrc: '/rafaelcetina.dev/images/wiki-bacon.jpeg',
+		projectImageSrc: '/images/wiki-bacon.jpeg',
 	},
 	{
 		projectName: 'Tile Installation Calculator',
@@ -54,7 +54,7 @@ const projects: ProjectCardProps[] = [
 			"An app built for a local business that estimates the cost their tile installation service given the customer's area and tile of choice.",
 		sourceLink: '',
 		liveLink: 'https://master--effortless-fenglisu-62b59d.netlify.app/',
-		projectImageSrc: '/rafaelcetina.dev/images/tile-calculator.jpg',
+		projectImageSrc: '/images/tile-calculator.jpg',
 	},
 	{
 		projectName: 'This Website',
@@ -63,7 +63,7 @@ const projects: ProjectCardProps[] = [
 		description: 'My personal portfolio website and blog.',
 		sourceLink: 'https://github.com/andremralves/new_website',
 		liveLink: '',
-		projectImageSrc: '/rafaelcetina.dev/images/website-project.jpg',
+		projectImageSrc: '/images/website-project.jpg',
 	},
 	{
 		projectName: 'Django CRM',
@@ -72,7 +72,7 @@ const projects: ProjectCardProps[] = [
 		description: 'A CRM system to manage patients and appointments.',
 		sourceLink: 'https://github.com/andremralves/django-CRM',
 		liveLink: '',
-		projectImageSrc: '/rafaelcetina.dev/images/django-project.jpg',
+		projectImageSrc: '/images/django-project.jpg',
 	},
 	{
 		projectName: 'Todo List',
@@ -82,7 +82,7 @@ const projects: ProjectCardProps[] = [
 			'A Todo List app built with Typescript, TailwindCss, React and using Local Storage to store your tasks.',
 		sourceLink: 'https://github.com/andremralves/react-tailwind-todolist',
 		liveLink: 'https://serene-salmiakki-a825e6.netlify.app/',
-		projectImageSrc: '/rafaelcetina.dev/images/todolist-project.jpg',
+		projectImageSrc: '/images/todolist-project.jpg',
 	},
 ];
 
@@ -91,6 +91,7 @@ const limitedProjects = ref<ProjectCardProps[]>(projects.slice(0, props.limit ||
 
 
 </script>
+
 <template>
 	<section class="mt-10">
 		<SectionTitle title="Projects" />
@@ -104,4 +105,3 @@ const limitedProjects = ref<ProjectCardProps[]>(projects.slice(0, props.limit ||
 		</a>
 	</section>
 </template>
-
